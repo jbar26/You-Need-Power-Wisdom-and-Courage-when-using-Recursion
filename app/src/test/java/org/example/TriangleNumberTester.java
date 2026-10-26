@@ -10,10 +10,7 @@ import java.util.ArrayList;
 
 
 class TriangleNumberTester {
-//    @Test void appHasAGreeting() {
-//        App classUnderTest = new App();
-//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-//    }
+
     TriangleNumberCalculator calc = new TriangleNumberCalculator();
     @Test
     public void testValueNeg1()
