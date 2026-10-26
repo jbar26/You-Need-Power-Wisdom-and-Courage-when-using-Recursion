@@ -4,11 +4,36 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws ArithmeticException {
+        TriangleNumberCalculator calc = new TriangleNumberCalculator();
+
+        System.out.println(calc.value(1));
+        System.out.println(calc.value(2));
+        System.out.println(calc.value(4));
+        System.out.println(calc.add(1, 1));
+        System.out.println(calc.add(2, 3));
+        System.out.println(calc.add(4, 2));
+        System.out.println(calc.subtract(1, 1));
+        System.out.println(calc.subtract(2, 3));
+        System.out.println(calc.subtract(4, 2));
+        System.out.println(calc.multiply(1, 1));
+        System.out.println(calc.multiply(2, 3));
+        System.out.println(calc.multiply(4, 2));
+        try
+        {
+            System.out.println(calc.divide(1, 1));
+            System.out.println(calc.divide(2, 3));
+            System.out.println(calc.divide(4, 2));
+            System.out.println(calc.divide(4, 0));
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println(calc.sequence(3));
+
+
     }
 }
